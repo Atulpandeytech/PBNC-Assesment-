@@ -1,0 +1,215 @@
+{
+  "schema_version": "1.0",
+  "document_id": "239d0ae6-0feb-4f04-92b2-ed0cbf626c12",
+  "original_filename": "3_scanned_noisy.pdf",
+  "page_count": 1,
+  "total_questions": 3,
+  "exported_at": "2026-09-19T20:01:37.666507+00:00",
+  "questions": [
+    {
+      "schema_version": "1.0",
+      "id": "f225941e-c304-44ae-9e28-64d5204447bc",
+      "document_id": "239d0ae6-0feb-4f04-92b2-ed0cbf626c12",
+      "group_id": null,
+      "question_number": "1",
+      "sequence_index": 1,
+      "question_text": "Which organelle is known as the powerhouse of the cell?",
+      "question_type": "mcq_single",
+      "options": [
+        {
+          "label": "A",
+          "text": "Nucleus",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "B",
+          "text": "Ribosome",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "C",
+          "text": "Mitochondria",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "D",
+          "text": "Lysosome",
+          "image_key": null,
+          "asset_ids": []
+        }
+      ],
+      "answer": null,
+      "assets": [],
+      "source": {
+        "document": "3_scanned_noisy.pdf",
+        "pages": [
+          1
+        ],
+        "bbox": null
+      },
+      "confidence": 0.821,
+      "confidence_breakdown": {
+        "ocr_confidence": 0.92,
+        "page_quality": 0.24,
+        "numbering_continuity": 1.0,
+        "option_completeness": 1.0,
+        "answer_certainty": 0.7,
+        "text_sanity": 1.0
+      },
+      "status": "partial",
+      "warnings": [],
+      "review": {
+        "status": "none",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "original_value": null,
+        "notes": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "1bb46421-4277-4e7d-99f8-e3a44770b8e0",
+      "document_id": "239d0ae6-0feb-4f04-92b2-ed0cbf626c12",
+      "group_id": null,
+      "question_number": "2",
+      "sequence_index": 2,
+      "question_text": "What is the value of gravitational acceleration g on the surface of Earth?",
+      "question_type": "mcq_single",
+      "options": [
+        {
+          "label": "A",
+          "text": "9.8 m/sA2",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "B",
+          "text": "8.9 m/sA2",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "C",
+          "text": "11.2 m/sA2",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "D",
+          "text": "6.4 m/sA2",
+          "image_key": null,
+          "asset_ids": []
+        }
+      ],
+      "answer": {
+        "value": [
+          "A"
+        ],
+        "raw": "2-A",
+        "source_page": 1,
+        "match_status": "matched",
+        "confidence": 0.95
+      },
+      "assets": [],
+      "source": {
+        "document": "3_scanned_noisy.pdf",
+        "pages": [
+          1
+        ],
+        "bbox": null
+      },
+      "confidence": 0.866,
+      "confidence_breakdown": {
+        "ocr_confidence": 0.92,
+        "page_quality": 0.24,
+        "numbering_continuity": 1.0,
+        "option_completeness": 1.0,
+        "answer_certainty": 1.0,
+        "text_sanity": 1.0
+      },
+      "status": "success",
+      "warnings": [],
+      "review": {
+        "status": "none",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "original_value": null,
+        "notes": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "2e903830-9e4e-46c5-8c11-c36285fe71a8",
+      "document_id": "239d0ae6-0feb-4f04-92b2-ed0cbf626c12",
+      "group_id": null,
+      "question_number": "3",
+      "sequence_index": 3,
+      "question_text": "Which element has the chemical symbol Fe?",
+      "question_type": "mcq_single",
+      "options": [
+        {
+          "label": "A",
+          "text": "Fluorine",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "B",
+          "text": "Francium",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "C",
+          "text": "Iron",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "D",
+          "text": "Fermium",
+          "image_key": null,
+          "asset_ids": []
+        }
+      ],
+      "answer": {
+        "value": [
+          "C"
+        ],
+        "raw": "3-C",
+        "source_page": 1,
+        "match_status": "matched",
+        "confidence": 0.95
+      },
+      "assets": [],
+      "source": {
+        "document": "3_scanned_noisy.pdf",
+        "pages": [
+          1
+        ],
+        "bbox": null
+      },
+      "confidence": 0.866,
+      "confidence_breakdown": {
+        "ocr_confidence": 0.92,
+        "page_quality": 0.24,
+        "numbering_continuity": 1.0,
+        "option_completeness": 1.0,
+        "answer_certainty": 1.0,
+        "text_sanity": 1.0
+      },
+      "status": "success",
+      "warnings": [],
+      "review": {
+        "status": "none",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "original_value": null,
+        "notes": null
+      }
+    }
+  ]
+}

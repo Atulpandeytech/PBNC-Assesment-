@@ -1,0 +1,41 @@
+[
+  {
+    "test": "Disguised Executable (.exe as .pdf)",
+    "file": "invalid_disguised_exe.pdf",
+    "status_code": 400,
+    "error_response": {
+      "error": {
+        "code": "DISGUISED_EXECUTABLE",
+        "message": "Executable files disguised as documents are strictly rejected",
+        "details": {},
+        "request_id": "463089a9-cd3b-4267-9603-0825c6e3a3fb"
+      }
+    }
+  },
+  {
+    "test": "Unsupported Office File (.docx)",
+    "file": "invalid_unsupported.docx",
+    "status_code": 415,
+    "error_response": {
+      "error": {
+        "code": "UNSUPPORTED_MEDIA_TYPE",
+        "message": "File extension '.docx' is not supported. Supported: .jpeg, .pdf, .png, .jpg",
+        "details": {},
+        "request_id": "b4c83640-a6b8-4c1c-a1e1-d7b02cda151e"
+      }
+    }
+  },
+  {
+    "test": "Oversize File (> 50 MB)",
+    "file": "invalid_oversize.pdf",
+    "status_code": 413,
+    "error_response": {
+      "error": {
+        "code": "PAYLOAD_TOO_LARGE",
+        "message": "File exceeds maximum allowed size of 52428800 bytes",
+        "details": {},
+        "request_id": "3ed2e761-324c-4448-bfb6-54c9659c0e0c"
+      }
+    }
+  }
+]

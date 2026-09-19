@@ -1,0 +1,282 @@
+{
+  "schema_version": "1.0",
+  "document_id": "7c4ff9ab-1fa1-4769-a0ed-aec80dfacff4",
+  "original_filename": "6_cross_page.pdf",
+  "page_count": 2,
+  "total_questions": 4,
+  "exported_at": "2026-09-19T20:01:40.460931+00:00",
+  "questions": [
+    {
+      "schema_version": "1.0",
+      "id": "19d7391b-694b-4da2-878c-fb9939afe099",
+      "document_id": "7c4ff9ab-1fa1-4769-a0ed-aec80dfacff4",
+      "group_id": null,
+      "question_number": "1",
+      "sequence_index": 1,
+      "question_text": "What is the SI unit of electric potential difference?",
+      "question_type": "mcq_single",
+      "options": [
+        {
+          "label": "A",
+          "text": "Ampere",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "B",
+          "text": "Volt",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "C",
+          "text": "Ohm",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "D",
+          "text": "Joule",
+          "image_key": null,
+          "asset_ids": []
+        }
+      ],
+      "answer": {
+        "value": [
+          "0"
+        ],
+        "raw": "1.0",
+        "source_page": 2,
+        "match_status": "matched",
+        "confidence": 0.95
+      },
+      "assets": [],
+      "source": {
+        "document": "6_cross_page.pdf",
+        "pages": [
+          1,
+          2
+        ],
+        "bbox": null
+      },
+      "confidence": 0.97,
+      "confidence_breakdown": {
+        "ocr_confidence": 0.98,
+        "page_quality": 0.83,
+        "numbering_continuity": 1.0,
+        "option_completeness": 1.0,
+        "answer_certainty": 1.0,
+        "text_sanity": 1.0
+      },
+      "status": "success",
+      "warnings": [],
+      "review": {
+        "status": "none",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "original_value": null,
+        "notes": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "d0f176c4-a8a2-4a23-b9fa-a1bc5f04450f",
+      "document_id": "7c4ff9ab-1fa1-4769-a0ed-aec80dfacff4",
+      "group_id": null,
+      "question_number": "2",
+      "sequence_index": 2,
+      "question_text": "An object is placed at 2F in front of a convex lens. The image formed is:",
+      "question_type": "mcq_single",
+      "options": [
+        {
+          "label": "A",
+          "text": "Virtual and enlarged",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "B",
+          "text": "Real and inverted at 2F",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "C",
+          "text": "Real and diminished",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "D",
+          "text": "At infinity",
+          "image_key": null,
+          "asset_ids": []
+        }
+      ],
+      "answer": {
+        "value": [
+          "A"
+        ],
+        "raw": "2. A",
+        "source_page": 1,
+        "match_status": "matched",
+        "confidence": 0.95
+      },
+      "assets": [],
+      "source": {
+        "document": "6_cross_page.pdf",
+        "pages": [
+          1,
+          2
+        ],
+        "bbox": null
+      },
+      "confidence": 0.967,
+      "confidence_breakdown": {
+        "ocr_confidence": 0.98,
+        "page_quality": 0.83,
+        "numbering_continuity": 1.0,
+        "option_completeness": 1.0,
+        "answer_certainty": 1.0,
+        "text_sanity": 0.986
+      },
+      "status": "success",
+      "warnings": [],
+      "review": {
+        "status": "none",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "original_value": null,
+        "notes": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "30b93c5d-a91e-4113-b948-91d139789a07",
+      "document_id": "7c4ff9ab-1fa1-4769-a0ed-aec80dfacff4",
+      "group_id": null,
+      "question_number": "3",
+      "sequence_index": 3,
+      "question_text": "In an experiment to observe electromagnetic induction, a solenoid having 500 turns is connected to a sensitive galvanometer and a permanent bar magnet is moved along its axis with constant speed an --- PAGE 2 --- What conclusion can be drawn regarding the magnitude of the induced EMF?",
+      "question_type": "mcq_single",
+      "options": [
+        {
+          "label": "A",
+          "text": "Induced EMF is directly proportional to the rate of change of magnetic flux",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "B",
+          "text": "Induced EMF is inversely proportional to the number of turns",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "C",
+          "text": "Induced EMF is zero at all speeds",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "D",
+          "text": "Induced EMF depends only on temperature Table 1: Experimental Observation Data Observation Trial Magnet Velocity (m/s) Induced Current (mA) Trial 1 0.5 12.4 Trial 2 1.0 24.8",
+          "image_key": null,
+          "asset_ids": []
+        }
+      ],
+      "answer": null,
+      "assets": [],
+      "source": {
+        "document": "6_cross_page.pdf",
+        "pages": [
+          1,
+          2
+        ],
+        "bbox": null
+      },
+      "confidence": 0.924,
+      "confidence_breakdown": {
+        "ocr_confidence": 0.98,
+        "page_quality": 0.83,
+        "numbering_continuity": 1.0,
+        "option_completeness": 1.0,
+        "answer_certainty": 0.7,
+        "text_sanity": 1.0
+      },
+      "status": "success",
+      "warnings": [],
+      "review": {
+        "status": "none",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "original_value": null,
+        "notes": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "6e915392-6fd3-4f67-bbdf-2249b1c40489",
+      "document_id": "7c4ff9ab-1fa1-4769-a0ed-aec80dfacff4",
+      "group_id": null,
+      "question_number": "4",
+      "sequence_index": 4,
+      "question_text": "Which rule is used to determine the direction of induced current?",
+      "question_type": "mcq_single",
+      "options": [
+        {
+          "label": "A",
+          "text": "Fleming's Right-Hand Rule",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "B",
+          "text": "Fleming's Left-Hand Rule",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "C",
+          "text": "Right-Hand Thumb Rule",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "D",
+          "text": "Coulomb's Law",
+          "image_key": null,
+          "asset_ids": []
+        }
+      ],
+      "answer": null,
+      "assets": [],
+      "source": {
+        "document": "6_cross_page.pdf",
+        "pages": [
+          1,
+          2
+        ],
+        "bbox": null
+      },
+      "confidence": 0.924,
+      "confidence_breakdown": {
+        "ocr_confidence": 0.98,
+        "page_quality": 0.83,
+        "numbering_continuity": 1.0,
+        "option_completeness": 1.0,
+        "answer_certainty": 0.7,
+        "text_sanity": 1.0
+      },
+      "status": "success",
+      "warnings": [],
+      "review": {
+        "status": "none",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "original_value": null,
+        "notes": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,359 @@
+{
+  "schema_version": "1.0",
+  "document_id": "cd38623e-2df2-4a60-bda2-78ece6060703",
+  "original_filename": "1_clean_mcq.pdf",
+  "page_count": 1,
+  "total_questions": 5,
+  "exported_at": "2026-09-19T20:01:34.275724+00:00",
+  "questions": [
+    {
+      "schema_version": "1.0",
+      "id": "dd99d803-6f94-4644-b583-d5a4d06ed36a",
+      "document_id": "cd38623e-2df2-4a60-bda2-78ece6060703",
+      "group_id": null,
+      "question_number": "1",
+      "sequence_index": 1,
+      "question_text": "What is the chemical formula of bleaching powder?",
+      "question_type": "mcq_single",
+      "options": [
+        {
+          "label": "A",
+          "text": "CaOCl2",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "C",
+          "text": "NaHCO3",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "D",
+          "text": "Na2CO3",
+          "image_key": null,
+          "asset_ids": []
+        }
+      ],
+      "answer": {
+        "value": [
+          "A"
+        ],
+        "raw": "1-A",
+        "source_page": 1,
+        "match_status": "matched",
+        "confidence": 0.95
+      },
+      "assets": [],
+      "source": {
+        "document": "1_clean_mcq.pdf",
+        "pages": [
+          1
+        ],
+        "bbox": null
+      },
+      "confidence": 0.935,
+      "confidence_breakdown": {
+        "ocr_confidence": 0.98,
+        "page_quality": 0.848,
+        "numbering_continuity": 1.0,
+        "option_completeness": 0.75,
+        "answer_certainty": 1.0,
+        "text_sanity": 1.0
+      },
+      "status": "success",
+      "warnings": [],
+      "review": {
+        "status": "none",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "original_value": null,
+        "notes": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "c0f3f4c3-c598-4f10-b636-25fc6aa1d5bb",
+      "document_id": "cd38623e-2df2-4a60-bda2-78ece6060703",
+      "group_id": null,
+      "question_number": "2",
+      "sequence_index": 2,
+      "question_text": "Which part of the human brain is responsible for regulating posture and balance?",
+      "question_type": "mcq_single",
+      "options": [
+        {
+          "label": "A",
+          "text": "Cerebrum",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "B",
+          "text": "Cerebellum",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "C",
+          "text": "Medulla",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "D",
+          "text": "Pons",
+          "image_key": null,
+          "asset_ids": []
+        }
+      ],
+      "answer": {
+        "value": [
+          "B"
+        ],
+        "raw": "2-B",
+        "source_page": 1,
+        "match_status": "matched",
+        "confidence": 0.95
+      },
+      "assets": [],
+      "source": {
+        "document": "1_clean_mcq.pdf",
+        "pages": [
+          1
+        ],
+        "bbox": null
+      },
+      "confidence": 0.972,
+      "confidence_breakdown": {
+        "ocr_confidence": 0.98,
+        "page_quality": 0.848,
+        "numbering_continuity": 1.0,
+        "option_completeness": 1.0,
+        "answer_certainty": 1.0,
+        "text_sanity": 1.0
+      },
+      "status": "success",
+      "warnings": [],
+      "review": {
+        "status": "none",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "original_value": null,
+        "notes": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "c6f91b24-1f06-42bd-b13e-da1512cb5a11",
+      "document_id": "cd38623e-2df2-4a60-bda2-78ece6060703",
+      "group_id": null,
+      "question_number": "3",
+      "sequence_index": 3,
+      "question_text": "The phenomenon of splitting white light into its component colors is called:",
+      "question_type": "mcq_single",
+      "options": [
+        {
+          "label": "A",
+          "text": "Reflection",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "B",
+          "text": "Refraction",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "C",
+          "text": "Dispersion",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "D",
+          "text": "Total Internal Reflection",
+          "image_key": null,
+          "asset_ids": []
+        }
+      ],
+      "answer": {
+        "value": [
+          "C"
+        ],
+        "raw": "3-C",
+        "source_page": 1,
+        "match_status": "matched",
+        "confidence": 0.95
+      },
+      "assets": [],
+      "source": {
+        "document": "1_clean_mcq.pdf",
+        "pages": [
+          1
+        ],
+        "bbox": null
+      },
+      "confidence": 0.97,
+      "confidence_breakdown": {
+        "ocr_confidence": 0.98,
+        "page_quality": 0.848,
+        "numbering_continuity": 1.0,
+        "option_completeness": 1.0,
+        "answer_certainty": 1.0,
+        "text_sanity": 0.987
+      },
+      "status": "success",
+      "warnings": [],
+      "review": {
+        "status": "none",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "original_value": null,
+        "notes": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "b5b29ab7-d32f-436d-9bbf-8d7cfcd614ce",
+      "document_id": "cd38623e-2df2-4a60-bda2-78ece6060703",
+      "group_id": null,
+      "question_number": "4",
+      "sequence_index": 4,
+      "question_text": "Which of the following metals occurs in native state in nature?",
+      "question_type": "mcq_single",
+      "options": [
+        {
+          "label": "A",
+          "text": "Gold",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "B",
+          "text": "Iron",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "C",
+          "text": "Aluminium",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "D",
+          "text": "Zinc",
+          "image_key": null,
+          "asset_ids": []
+        }
+      ],
+      "answer": {
+        "value": [
+          "A"
+        ],
+        "raw": "4-A",
+        "source_page": 1,
+        "match_status": "matched",
+        "confidence": 0.95
+      },
+      "assets": [],
+      "source": {
+        "document": "1_clean_mcq.pdf",
+        "pages": [
+          1
+        ],
+        "bbox": null
+      },
+      "confidence": 0.972,
+      "confidence_breakdown": {
+        "ocr_confidence": 0.98,
+        "page_quality": 0.848,
+        "numbering_continuity": 1.0,
+        "option_completeness": 1.0,
+        "answer_certainty": 1.0,
+        "text_sanity": 1.0
+      },
+      "status": "success",
+      "warnings": [],
+      "review": {
+        "status": "none",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "original_value": null,
+        "notes": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "0e303f22-f5ee-4b66-9718-2dcaaa3ab0ae",
+      "document_id": "cd38623e-2df2-4a60-bda2-78ece6060703",
+      "group_id": null,
+      "question_number": "5",
+      "sequence_index": 5,
+      "question_text": "What is the SI unit of electrical resistivity?",
+      "question_type": "mcq_single",
+      "options": [
+        {
+          "label": "A",
+          "text": "Ohm",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "B",
+          "text": "Ohm-meter",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "C",
+          "text": "Ampere",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "D",
+          "text": "Volt-meter",
+          "image_key": null,
+          "asset_ids": []
+        }
+      ],
+      "answer": {
+        "value": [
+          "B"
+        ],
+        "raw": "5-B",
+        "source_page": 1,
+        "match_status": "matched",
+        "confidence": 0.95
+      },
+      "assets": [],
+      "source": {
+        "document": "1_clean_mcq.pdf",
+        "pages": [
+          1
+        ],
+        "bbox": null
+      },
+      "confidence": 0.972,
+      "confidence_breakdown": {
+        "ocr_confidence": 0.98,
+        "page_quality": 0.848,
+        "numbering_continuity": 1.0,
+        "option_completeness": 1.0,
+        "answer_certainty": 1.0,
+        "text_sanity": 1.0
+      },
+      "status": "success",
+      "warnings": [],
+      "review": {
+        "status": "none",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "original_value": null,
+        "notes": null
+      }
+    }
+  ]
+}

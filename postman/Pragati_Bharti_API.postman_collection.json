@@ -1,0 +1,713 @@
+{
+  "info": {
+    "_postman_id": "7f62c823-74b8-4d5f-9e63-c7ad06ba55d2",
+    "name": "Pragati Bharti - Document Intelligence & Question Extraction API",
+    "description": "Production-grade REST API collection for Pragati Bharti education platform. Covers authentication, multi-tenant document ingestion, async extraction pipeline monitoring, question review/correction workflow, cross-document answer key merging, and format export.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{jwt_token}}",
+        "type": "string"
+      }
+    ]
+  },
+  "item": [
+    {
+      "name": "1. System Health & Observability",
+      "item": [
+        {
+          "name": "Full Health Check",
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/health/",
+              "host": ["{{base_url}}"],
+              "path": ["health", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Readiness Check",
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/health/ready",
+              "host": ["{{base_url}}"],
+              "path": ["health", "ready"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Liveness Check",
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/health/live",
+              "host": ["{{base_url}}"],
+              "path": ["health", "live"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Prometheus Metrics",
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/metrics",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["metrics"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "2. Authentication & Identity",
+      "item": [
+        {
+          "name": "Login (Get JWT Token - Admin)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var jsonData = pm.response.json();",
+                  "if (jsonData.access_token) {",
+                  "    pm.environment.set(\"jwt_token\", jsonData.access_token);",
+                  "    console.log(\"Saved jwt_token to environment.\");",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"{{admin_email}}\",\n  \"password\": \"{{admin_password}}\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/auth/login",
+              "host": ["{{base_url}}"],
+              "path": ["auth", "login"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login (Reviewer)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var jsonData = pm.response.json();",
+                  "if (jsonData.access_token) {",
+                  "    pm.environment.set(\"jwt_token\", jsonData.access_token);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"{{reviewer_email}}\",\n  \"password\": \"{{reviewer_password}}\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/auth/login",
+              "host": ["{{base_url}}"],
+              "path": ["auth", "login"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Current User Profile",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/auth/me",
+              "host": ["{{base_url}}"],
+              "path": ["auth", "me"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "3. Document Ingestion & Processing",
+      "item": [
+        {
+          "name": "Upload Document (PDF / Image)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var jsonData = pm.response.json();",
+                  "if (jsonData.id) {",
+                  "    pm.environment.set(\"document_id\", jsonData.id);",
+                  "    console.log(\"Saved document_id:\", jsonData.id);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": []
+                },
+                {
+                  "key": "metadata",
+                  "value": "{\"exam_name\": \"CBSE Class 10 Mock Exam\", \"subject\": \"Mathematics\", \"year\": 2026}",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/documents/upload",
+              "host": ["{{base_url}}"],
+              "path": ["documents", "upload"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "List Documents (Paginated)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/documents/?page=1&page_size=10",
+              "host": ["{{base_url}}"],
+              "path": ["documents", ""],
+              "query": [
+                { "key": "page", "value": "1" },
+                { "key": "page_size", "value": "10" },
+                { "key": "status", "value": "completed", "disabled": true }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Document Details",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/documents/{{document_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["documents", "{{document_id}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Document Status & Progress",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/documents/{{document_id}}/status",
+              "host": ["{{base_url}}"],
+              "path": ["documents", "{{document_id}}", "status"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Trigger Document Reprocessing",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/documents/{{document_id}}/reprocess",
+              "host": ["{{base_url}}"],
+              "path": ["documents", "{{document_id}}", "reprocess"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Export Document as JSON",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/documents/{{document_id}}/export?format=json",
+              "host": ["{{base_url}}"],
+              "path": ["documents", "{{document_id}}", "export"],
+              "query": [{ "key": "format", "value": "json" }]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Export Document as CSV",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/documents/{{document_id}}/export?format=csv",
+              "host": ["{{base_url}}"],
+              "path": ["documents", "{{document_id}}", "export"],
+              "query": [{ "key": "format", "value": "csv" }]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Export Document as DOCX",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/documents/{{document_id}}/export?format=docx",
+              "host": ["{{base_url}}"],
+              "path": ["documents", "{{document_id}}", "export"],
+              "query": [{ "key": "format", "value": "docx" }]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Document (Admin / Owner)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/documents/{{document_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["documents", "{{document_id}}"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "4. Question Management & Review Workflow",
+      "item": [
+        {
+          "name": "List Questions for Document",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var jsonData = pm.response.json();",
+                  "if (jsonData.items && jsonData.items.length > 0) {",
+                  "    pm.environment.set(\"question_id\", jsonData.items[0].id);",
+                  "    console.log(\"Saved question_id:\", jsonData.items[0].id);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/questions/?document_id={{document_id}}&page=1&page_size=50",
+              "host": ["{{base_url}}"],
+              "path": ["questions", ""],
+              "query": [
+                { "key": "document_id", "value": "{{document_id}}" },
+                { "key": "page", "value": "1" },
+                { "key": "page_size", "value": "50" },
+                { "key": "review_status", "value": "pending", "disabled": true },
+                { "key": "confidence_min", "value": "0.8", "disabled": true }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Single Question Details",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/questions/{{question_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["questions", "{{question_id}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update / Edit Question (Direct Patch)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"question_text\": \"Which organelle is universally known as the powerhouse of eukaryotic cells?\",\n  \"correct_answer\": \"Mitochondria\",\n  \"explanation\": \"Mitochondria generate most of the chemical energy required by cells.\",\n  \"review_status\": \"corrected\",\n  \"review_notes\": \"Clarified wording during human review.\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/questions/{{question_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["questions", "{{question_id}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Review Action: Approve Question",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"action\": \"approved\",\n  \"notes\": \"Verified question text, options, and answer key accuracy.\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/questions/{{question_id}}/review",
+              "host": ["{{base_url}}"],
+              "path": ["questions", "{{question_id}}", "review"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Review Action: Correct Question",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"action\": \"corrected\",\n  \"corrected_data\": {\n    \"question_text\": \"Corrected question title\",\n    \"correct_answer\": \"B\"\n  },\n  \"notes\": \"Fixed typographic error in option\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/questions/{{question_id}}/review",
+              "host": ["{{base_url}}"],
+              "path": ["questions", "{{question_id}}", "review"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Review Action: Reject Question",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"action\": \"rejected\",\n  \"notes\": \"Incomplete scan snippet or illegible diagram.\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/questions/{{question_id}}/review",
+              "host": ["{{base_url}}"],
+              "path": ["questions", "{{question_id}}", "review"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Question",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/questions/{{question_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["questions", "{{question_id}}"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "5. Answer Key Management",
+      "item": [
+        {
+          "name": "List Extracted Answer Key Entries",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/answers/?document_id={{document_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["answers", ""],
+              "query": [
+                { "key": "document_id", "value": "{{document_id}}" }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Specific Answer Key Entry",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/answers/{{answer_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["answers", "{{answer_id}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Patch Answer Key Entry",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"correct_option\": \"C\",\n  \"explanation\": \"Updated verified explanation.\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/answers/{{answer_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["answers", "{{answer_id}}"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "6. Cross-Document Linking (Groups)",
+      "item": [
+        {
+          "name": "Create Document Group",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var jsonData = pm.response.json();",
+                  "if (jsonData.id) {",
+                  "    pm.environment.set(\"group_id\", jsonData.id);",
+                  "    console.log(\"Saved group_id:\", jsonData.id);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"CBSE Physics Term 1 Paper & Key\",\n  \"description\": \"Question paper and standalone official answer key pairing.\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/groups/",
+              "host": ["{{base_url}}"],
+              "path": ["groups", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "List Document Groups",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/groups/?page=1&page_size=20",
+              "host": ["{{base_url}}"],
+              "path": ["groups", ""],
+              "query": [
+                { "key": "page", "value": "1" },
+                { "key": "page_size", "value": "20" }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Group Details",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/groups/{{group_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["groups", "{{group_id}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Link Document to Group",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"document_id\": \"{{document_id}}\",\n  \"role\": \"question_paper\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/groups/{{group_id}}/documents",
+              "host": ["{{base_url}}"],
+              "path": ["groups", "{{group_id}}", "documents"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Merge Group (Link Question Paper with Answer Key)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/groups/{{group_id}}/merge",
+              "host": ["{{base_url}}"],
+              "path": ["groups", "{{group_id}}", "merge"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Document Group",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/groups/{{group_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["groups", "{{group_id}}"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "7. Warnings & Document Quality",
+      "item": [
+        {
+          "name": "List Warnings for Document",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/warnings/?document_id={{document_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["warnings", ""],
+              "query": [
+                { "key": "document_id", "value": "{{document_id}}" }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Warning Details",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/warnings/{{warning_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["warnings", "{{warning_id}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Resolve Quality Warning",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/warnings/{{warning_id}}/resolve",
+              "host": ["{{base_url}}"],
+              "path": ["warnings", "{{warning_id}}", "resolve"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

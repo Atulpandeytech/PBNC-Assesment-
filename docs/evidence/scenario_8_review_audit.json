@@ -1,0 +1,244 @@
+{
+  "approved_question": {
+    "schema_version": "1.0",
+    "id": "dd99d803-6f94-4644-b583-d5a4d06ed36a",
+    "document_id": "cd38623e-2df2-4a60-bda2-78ece6060703",
+    "group_id": null,
+    "question_number": "1",
+    "sequence_index": 1,
+    "question_text": "What is the chemical formula of bleaching powder?",
+    "question_type": "mcq_single",
+    "options": [
+      {
+        "label": "A",
+        "text": "CaOCl2",
+        "image_key": null,
+        "asset_ids": []
+      },
+      {
+        "label": "C",
+        "text": "NaHCO3",
+        "image_key": null,
+        "asset_ids": []
+      },
+      {
+        "label": "D",
+        "text": "Na2CO3",
+        "image_key": null,
+        "asset_ids": []
+      }
+    ],
+    "answer": {
+      "value": [
+        "A"
+      ],
+      "raw": "1-A",
+      "source_page": 1,
+      "match_status": "matched",
+      "confidence": 0.95
+    },
+    "assets": [],
+    "source": {
+      "document": "1_clean_mcq.pdf",
+      "pages": [
+        1
+      ],
+      "bbox": null
+    },
+    "confidence": 0.935,
+    "confidence_breakdown": {
+      "ocr_confidence": 0.98,
+      "page_quality": 0.848,
+      "numbering_continuity": 1.0,
+      "option_completeness": 0.75,
+      "answer_certainty": 1.0,
+      "text_sanity": 1.0
+    },
+    "status": "success",
+    "warnings": [],
+    "review": {
+      "status": "approved",
+      "reviewed_by": "2bfe9c25-7da9-419a-8588-2e3a519de858",
+      "reviewed_at": "2026-09-19T20:01:47.642315Z",
+      "original_value": null,
+      "notes": null
+    }
+  },
+  "corrected_question": {
+    "schema_version": "1.0",
+    "id": "c0f3f4c3-c598-4f10-b636-25fc6aa1d5bb",
+    "document_id": "cd38623e-2df2-4a60-bda2-78ece6060703",
+    "group_id": null,
+    "question_number": "2",
+    "sequence_index": 2,
+    "question_text": "Which part of the human brain maintains posture, equilibrium, and muscle tone?",
+    "question_type": "mcq_single",
+    "options": [
+      {
+        "label": "A",
+        "text": "Cerebrum",
+        "image_key": null,
+        "asset_ids": []
+      },
+      {
+        "label": "B",
+        "text": "Cerebellum",
+        "image_key": null,
+        "asset_ids": []
+      },
+      {
+        "label": "C",
+        "text": "Medulla",
+        "image_key": null,
+        "asset_ids": []
+      },
+      {
+        "label": "D",
+        "text": "Pons",
+        "image_key": null,
+        "asset_ids": []
+      }
+    ],
+    "answer": {
+      "value": [
+        "B"
+      ],
+      "raw": "2-B",
+      "source_page": 1,
+      "match_status": "matched",
+      "confidence": 0.95
+    },
+    "assets": [],
+    "source": {
+      "document": "1_clean_mcq.pdf",
+      "pages": [
+        1
+      ],
+      "bbox": null
+    },
+    "confidence": 0.972,
+    "confidence_breakdown": {
+      "ocr_confidence": 0.98,
+      "page_quality": 0.848,
+      "numbering_continuity": 1.0,
+      "option_completeness": 1.0,
+      "answer_certainty": 1.0,
+      "text_sanity": 1.0
+    },
+    "status": "success",
+    "warnings": [],
+    "review": {
+      "status": "corrected",
+      "reviewed_by": "2bfe9c25-7da9-419a-8588-2e3a519de858",
+      "reviewed_at": "2026-09-19T20:01:47.731791Z",
+      "original_value": {
+        "question_number": "2",
+        "question_text": "Which part of the human brain is responsible for regulating posture and balance?",
+        "question_type": "mcq_single",
+        "options": [
+          {
+            "label": "A",
+            "text": "Cerebrum",
+            "asset_ids": []
+          },
+          {
+            "label": "B",
+            "text": "Cerebellum",
+            "asset_ids": []
+          },
+          {
+            "label": "C",
+            "text": "Medulla",
+            "asset_ids": []
+          },
+          {
+            "label": "D",
+            "text": "Pons",
+            "asset_ids": []
+          }
+        ],
+        "answer": {
+          "value": [
+            "B"
+          ],
+          "raw": "2-B",
+          "source_page": 1,
+          "match_status": "matched",
+          "confidence": 0.95
+        }
+      },
+      "notes": "Refined wording for scientific precision."
+    }
+  },
+  "rejected_question": {
+    "schema_version": "1.0",
+    "id": "c6f91b24-1f06-42bd-b13e-da1512cb5a11",
+    "document_id": "cd38623e-2df2-4a60-bda2-78ece6060703",
+    "group_id": null,
+    "question_number": "3",
+    "sequence_index": 3,
+    "question_text": "The phenomenon of splitting white light into its component colors is called:",
+    "question_type": "mcq_single",
+    "options": [
+      {
+        "label": "A",
+        "text": "Reflection",
+        "image_key": null,
+        "asset_ids": []
+      },
+      {
+        "label": "B",
+        "text": "Refraction",
+        "image_key": null,
+        "asset_ids": []
+      },
+      {
+        "label": "C",
+        "text": "Dispersion",
+        "image_key": null,
+        "asset_ids": []
+      },
+      {
+        "label": "D",
+        "text": "Total Internal Reflection",
+        "image_key": null,
+        "asset_ids": []
+      }
+    ],
+    "answer": {
+      "value": [
+        "C"
+      ],
+      "raw": "3-C",
+      "source_page": 1,
+      "match_status": "matched",
+      "confidence": 0.95
+    },
+    "assets": [],
+    "source": {
+      "document": "1_clean_mcq.pdf",
+      "pages": [
+        1
+      ],
+      "bbox": null
+    },
+    "confidence": 0.97,
+    "confidence_breakdown": {
+      "ocr_confidence": 0.98,
+      "page_quality": 0.848,
+      "numbering_continuity": 1.0,
+      "option_completeness": 1.0,
+      "answer_certainty": 1.0,
+      "text_sanity": 0.987
+    },
+    "status": "success",
+    "warnings": [],
+    "review": {
+      "status": "rejected",
+      "reviewed_by": "2bfe9c25-7da9-419a-8588-2e3a519de858",
+      "reviewed_at": "2026-09-19T20:01:47.809404Z",
+      "original_value": null,
+      "notes": null
+    }
+  }
+}

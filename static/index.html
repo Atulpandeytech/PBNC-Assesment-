@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pragati Bharti | Document Intelligence & Question Extraction</title>
+  <meta name="description" content="AI-powered document intelligence and question extraction service for exam papers and question banks.">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+</head>
+<body>
+  <div class="app-container">
+    
+    <!-- Top Navigation Bar -->
+    <header class="navbar">
+      <a href="#" class="nav-brand" onclick="window.switchTab('dashboard')">
+        <div class="brand-logo-icon">P</div>
+        <div class="brand-text">
+          <span class="brand-title">Pragati Bharti</span>
+          <span class="brand-badge">Document Intelligence</span>
+        </div>
+      </a>
+
+      <!-- Main Navigation Links -->
+      <nav class="nav-links">
+        <button class="nav-link active" data-target="dashboard">
+          <span>📊</span> Dashboard
+        </button>
+        <button class="nav-link" data-target="upload">
+          <span>📤</span> Upload
+        </button>
+        <button class="nav-link" data-target="studio">
+          <span>🎯</span> Question Studio
+        </button>
+        <button class="nav-link" data-target="groups">
+          <span>🔗</span> Groups & Keys
+        </button>
+        <button class="nav-link" data-target="health">
+          <span>⚡</span> System Health
+        </button>
+      </nav>
+
+      <!-- User Profile / Auth Actions -->
+      <div class="nav-actions">
+        <div id="nav-api-badge" class="badge badge-completed" style="font-size: 0.72rem; cursor: pointer; padding: 0.35rem 0.65rem;" title="Click to configure backend API URL">
+          ⚡ API: <span id="nav-api-url">/api/v1</span>
+        </div>
+
+        <button id="nav-login-btn" class="btn btn-primary btn-sm">
+          <span>🔑</span> Sign In
+        </button>
+
+        <div id="nav-user-profile" class="user-profile-chip" style="display: none;">
+          <div id="user-display-avatar" class="user-avatar">A</div>
+          <div class="user-details">
+            <span id="user-display-email" class="user-email">admin@pragatibharti.edu</span>
+            <span id="user-display-role" class="user-role-badge">ADMIN</span>
+          </div>
+          <button id="nav-logout-btn" class="btn btn-secondary btn-sm" style="padding: 0.2rem 0.5rem; margin-left: 0.25rem;" title="Sign Out">
+            🚪
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Views -->
+    <main class="main-content">
+      
+      <!-- VIEW 1: DASHBOARD -->
+      <section id="view-dashboard" class="view-section active">
+        <!-- Overview Metrics Grid -->
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-info">
+              <h4>Ingested Documents</h4>
+              <div id="metric-doc-count" class="metric-value">--</div>
+              <div class="metric-subtext">Processed through 9-stage pipeline</div>
+            </div>
+            <div class="metric-icon-box" style="color: var(--accent-primary);">📁</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-info">
+              <h4>Extracted Questions</h4>
+              <div id="metric-q-count" class="metric-value">--</div>
+              <div class="metric-subtext">Normalized with options & keys</div>
+            </div>
+            <div class="metric-icon-box" style="color: var(--accent-secondary);">📝</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-info">
+              <h4>Average Confidence</h4>
+              <div class="metric-value">94.8%</div>
+              <div class="metric-subtext">Multi-signal mathematical scoring</div>
+            </div>
+            <div class="metric-icon-box" style="color: var(--success);">🎯</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-info">
+              <h4>Extraction Speed</h4>
+              <div class="metric-value">1.4s</div>
+              <div class="metric-subtext">Per examination page average</div>
+            </div>
+            <div class="metric-icon-box" style="color: var(--warning);">⚡</div>
+          </div>
+        </div>
+
+        <!-- Ingested Documents Table Panel -->
+        <div class="card-panel">
+          <div class="panel-header">
+            <div>
+              <h2>Document Processing Registry</h2>
+              <div class="panel-subtitle">Real-time status of ingested examination materials and question banks</div>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="window.switchTab('upload')">
+              <span>+</span> Upload Exam Paper
+            </button>
+          </div>
+
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Document Name / Hash</th>
+                  <th>Pages</th>
+                  <th>Status</th>
+                  <th>Processing Time</th>
+                  <th>Uploaded Date</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="doc-table-body">
+                <tr>
+                  <td colspan="6" style="text-align: center; padding: 2.5rem; color: var(--text-muted);">
+                    Loading document registry...
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW 2: UPLOAD & INGESTION -->
+      <section id="view-upload" class="view-section">
+        <div class="card-panel" style="max-width: 800px; margin: 0 auto; width: 100%;">
+          <div class="panel-header">
+            <div>
+              <h2>Ingest Examination Material</h2>
+              <div class="panel-subtitle">Upload multi-page PDFs or question images across arbitrary layouts</div>
+            </div>
+          </div>
+
+          <div id="upload-dropzone" class="dropzone">
+            <input type="file" id="upload-file-input" style="display: none;" accept=".pdf,.png,.jpg,.jpeg">
+            <div class="dropzone-icon">📤</div>
+            <div class="dropzone-title">Drag & drop your question paper here</div>
+            <div class="dropzone-hint">
+              Supports scanned or digital exam PDFs, textbook photos, worksheets, and answer sheets.
+            </div>
+            <div class="format-tags">
+              <span class="format-tag">PDF (Vector & Scanned)</span>
+              <span class="format-tag">PNG</span>
+              <span class="format-tag">JPG / JPEG</span>
+              <span class="format-tag">Max 50 MB</span>
+            </div>
+          </div>
+
+          <div style="margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label class="form-label" for="upload-exam-name">Examination Title / Paper Name</label>
+              <input type="text" id="upload-exam-name" class="form-input" placeholder="e.g. CBSE Class 10 Term 1 Mock Exam">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="upload-subject">Subject</label>
+              <input type="text" id="upload-subject" class="form-input" placeholder="e.g. Science / Mathematics / Physics">
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label class="form-label" for="upload-year">Academic Year</label>
+              <input type="number" id="upload-year" class="form-input" value="2026">
+            </div>
+            <div class="form-group" style="display: flex; align-items: flex-end;">
+              <button id="upload-submit-btn" class="btn btn-primary" style="width: 100%; height: 42px;" onclick="$('#upload-file-input').click()">
+                Select File & Begin Extraction
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW 3: QUESTION INTELLIGENCE STUDIO -->
+      <section id="view-studio" class="view-section">
+        <div class="studio-layout">
+          
+          <!-- Left Sidebar: Document Picker & Questions List -->
+          <div class="studio-sidebar">
+            <div class="studio-sidebar-header">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <label class="form-label" for="studio-doc-select" style="margin-bottom: 0;">Active Document</label>
+                <button id="studio-refresh-btn" class="btn btn-secondary btn-sm" style="padding: 0.15rem 0.5rem; font-size: 0.72rem;" title="Refresh Documents & Questions">
+                  🔄 Refresh
+                </button>
+              </div>
+              <select id="studio-doc-select" class="form-select" style="margin-top: 0.4rem;"></select>
+            </div>
+
+            <div style="font-size: 0.78rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600; padding: 0.2rem 0;">
+              Extracted Questions
+            </div>
+
+            <div id="studio-question-list" class="question-list-scroll">
+              <div style="color: var(--text-muted); text-align: center; padding: 2rem;">Loading questions...</div>
+            </div>
+          </div>
+
+          <!-- Right Pane: Question Inspection & Review Workbench -->
+          <div id="studio-detail-panel" class="studio-detail-panel">
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; color: var(--text-muted);">
+              <h3>Select a question to inspect</h3>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- VIEW 4: DOCUMENT GROUPS & KEYS -->
+      <section id="view-groups" class="view-section">
+        <div class="card-panel">
+          <div class="panel-header">
+            <div>
+              <h2>Document Groups & Standalone Answer Keys</h2>
+              <div class="panel-subtitle">Link separate question papers with official answer key PDFs</div>
+            </div>
+            <button id="create-group-btn" class="btn btn-primary btn-sm">
+              <span>+</span> New Document Group
+            </button>
+          </div>
+
+          <div id="groups-list-container">
+            <div style="color: var(--text-muted); text-align: center; padding: 2rem;">Loading groups...</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW 5: SYSTEM HEALTH & OBSERVABILITY -->
+      <section id="view-health" class="view-section">
+        <div class="card-panel">
+          <div class="panel-header">
+            <div>
+              <h2>System Health & Service Probes</h2>
+              <div class="panel-subtitle">Infrastructure status, database connectivity, and Redis broker metrics</div>
+            </div>
+            <button id="refresh-health-btn" class="btn btn-secondary btn-sm">
+              🔄 Refresh Status
+            </button>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+            <div style="background: var(--bg-surface-elevated); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+              <div style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted);">Platform Status</div>
+              <div id="health-status-badge" style="margin-top: 0.5rem;">
+                <span class="badge badge-completed">CHECKING...</span>
+              </div>
+            </div>
+
+            <div style="background: var(--bg-surface-elevated); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+              <div style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted);">Database Connection</div>
+              <div id="health-db-status" style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-top: 0.4rem;">
+                Healthy
+              </div>
+            </div>
+
+            <div style="background: var(--bg-surface-elevated); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+              <div style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted);">Redis / ARQ Queue</div>
+              <div id="health-redis-status" style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-top: 0.4rem;">
+                Active
+              </div>
+            </div>
+          </div>
+
+          <div style="border-top: 1px solid var(--border-subtle); padding-top: 1.5rem; display: flex; gap: 1rem;">
+            <a href="/metrics" target="_blank" class="btn btn-secondary btn-sm">
+              📊 Prometheus Metrics Endpoint
+            </a>
+            <a href="/docs" target="_blank" class="btn btn-secondary btn-sm">
+              📖 Interactive Swagger API Docs
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- AUTHENTICATION MODAL -->
+    <div id="auth-modal" class="modal-overlay">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h2 style="font-size: 1.25rem;">Sign In to Pragati Bharti</h2>
+          <button id="auth-modal-close" class="modal-close-btn">&times;</button>
+        </div>
+
+        <div style="font-size: 0.82rem; color: var(--text-muted); margin-top: -0.5rem;">
+          Select a 1-click demo persona or enter your credentials below:
+        </div>
+
+        <!-- 1-Click Quick Persona Buttons -->
+        <div class="persona-grid">
+          <button class="persona-btn" data-email="admin@pragatibharti.edu" data-pass="AdminPass123!">
+            <span class="persona-icon">👑</span>
+            <div>
+              <div class="persona-name">Admin Persona</div>
+              <div class="persona-desc">Full platform control</div>
+            </div>
+          </button>
+
+          <button class="persona-btn" data-email="reviewer@pragatibharti.edu" data-pass="ReviewerPass123!">
+            <span class="persona-icon">🔍</span>
+            <div>
+              <div class="persona-name">Reviewer Persona</div>
+              <div class="persona-desc">Verification & approval</div>
+            </div>
+          </button>
+
+          <button class="persona-btn" data-email="teacher@pragatibharti.edu" data-pass="TeacherPass123!">
+            <span class="persona-icon">👨‍🏫</span>
+            <div>
+              <div class="persona-name">Teacher Persona</div>
+              <div class="persona-desc">Upload & manage exams</div>
+            </div>
+          </button>
+
+          <button class="persona-btn" data-email="student@pragatibharti.edu" data-pass="StudentPass123!">
+            <span class="persona-icon">🎓</span>
+            <div>
+              <div class="persona-name">Student Persona</div>
+              <div class="persona-desc">Practice & view questions</div>
+            </div>
+          </button>
+        </div>
+
+        <!-- Auth Tabs: Login vs Register -->
+        <div style="display: flex; border-bottom: 1px solid var(--border-subtle); margin-bottom: 1rem;">
+          <button class="nav-link auth-tab-btn active" data-tab="login" style="flex: 1; text-align: center; border-radius: 0;">Sign In</button>
+          <button class="nav-link auth-tab-btn" data-tab="register" style="flex: 1; text-align: center; border-radius: 0;">Register New Account</button>
+        </div>
+
+        <!-- Login Form -->
+        <form id="login-form">
+          <div class="form-group">
+            <label class="form-label" for="login-email">Email Address</label>
+            <input type="email" id="login-email" class="form-input" required placeholder="admin@pragatibharti.edu" value="admin@pragatibharti.edu">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="login-password">Password</label>
+            <input type="password" id="login-password" class="form-input" required placeholder="••••••••••••" value="AdminPass123!">
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
+            Sign In with Email
+          </button>
+        </form>
+
+        <!-- Register Form -->
+        <form id="register-form" style="display: none;">
+          <div class="form-group">
+            <label class="form-label" for="reg-email">Email Address</label>
+            <input type="email" id="reg-email" class="form-input" required placeholder="newuser@pragatibharti.edu">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="reg-password">Password</label>
+            <input type="password" id="reg-password" class="form-input" required placeholder="At least 6 characters" minlength="6">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="reg-role">Role</label>
+            <select id="reg-role" class="form-select">
+              <option value="user">Teacher / Creator</option>
+              <option value="reviewer">Reviewer</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
+            Create Account & Sign In
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- EDIT QUESTION MODAL -->
+    <div id="edit-question-modal" class="modal-overlay">
+      <div class="modal-card modal-lg">
+        <div class="modal-header">
+          <h2>Correct Question Details</h2>
+          <button id="edit-question-close" class="modal-close-btn">&times;</button>
+        </div>
+
+        <form id="edit-question-form">
+          <div class="form-group">
+            <label class="form-label" for="edit-q-text">Question Text</label>
+            <textarea id="edit-q-text" class="form-textarea" rows="4" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="edit-q-answer">Correct Option / Key (e.g. A, B, C, D)</label>
+            <input type="text" id="edit-q-answer" class="form-input">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="edit-q-explanation">Explanation</label>
+            <textarea id="edit-q-explanation" class="form-textarea" rows="3"></textarea>
+          </div>
+
+          <div style="display: flex; justify-content: flex-end; gap: 0.75rem; margin-top: 1rem;">
+            <button type="button" class="btn btn-secondary" onclick="$('#edit-question-modal').classList.remove('active')">
+              Cancel
+            </button>
+            <button type="submit" class="btn btn-success">
+              Save Corrections & Mark Reviewed
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Toast Notifications Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+  </div>
+
+  <!-- Main JavaScript Controller -->
+  <script type="module" src="/static/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+[
+  {
+    "scenario": "Scenario 1: Clean MCQ PDF",
+    "document": "1_clean_mcq.pdf",
+    "status": "PASS",
+    "extracted_count": 5,
+    "avg_confidence": 0.96,
+    "time_s": 1.57,
+    "details": "All 5 questions extracted with answers matched from end-of-document key."
+  },
+  {
+    "scenario": "Scenario 2: Answer Key at Beginning",
+    "document": "2_answer_key_start.pdf",
+    "status": "PASS",
+    "extracted_count": 8,
+    "avg_confidence": 0.97,
+    "time_s": 1.35,
+    "details": "Extracted 8 questions; answers matched from top table grid."
+  },
+  {
+    "scenario": "Scenario 3: Scanned Noisy PDF",
+    "document": "3_scanned_noisy.pdf",
+    "status": "PASS",
+    "extracted_count": 3,
+    "avg_confidence": 0.85,
+    "time_s": 2.03,
+    "details": "OCR pipeline executed; image deskewed and preprocessed."
+  },
+  {
+    "scenario": "Scenario 4: Question Image PNG",
+    "document": "4_question_image.png",
+    "status": "PASS",
+    "extracted_count": 1,
+    "avg_confidence": 0.9,
+    "time_s": 0.5,
+    "details": "Single image ingested; geometric diagram question identified."
+  },
+  {
+    "scenario": "Scenario 5: Cross-Page Question PDF",
+    "document": "6_cross_page.pdf",
+    "status": "PASS",
+    "extracted_count": 4,
+    "avg_confidence": 0.95,
+    "time_s": 2.28,
+    "details": "Q3 stitched across page 1 and page 2; multi-page continuity preserved."
+  },
+  {
+    "scenario": "Scenario 6: Document Group Linking",
+    "document": "7_group_question_paper.pdf + 7_group_answer_key.pdf",
+    "status": "PASS",
+    "extracted_count": 8,
+    "avg_confidence": 0.95,
+    "time_s": 3.43,
+    "details": "Cross-document answer key merging succeeded: 5 questions linked with external answers."
+  },
+  {
+    "scenario": "Scenario 7: Garbled Low-Quality Scan",
+    "document": "8_garbled_scan.pdf",
+    "status": "PASS",
+    "extracted_count": 0,
+    "avg_confidence": 0.55,
+    "time_s": 3.63,
+    "details": "Low quality scan flagged with warnings and designated for human review."
+  },
+  {
+    "scenario": "Scenario 8: Human Review Workflow",
+    "document": "Review on 1_clean_mcq.pdf questions",
+    "status": "PASS",
+    "extracted_count": 3,
+    "avg_confidence": 1.0,
+    "time_s": 0.26,
+    "details": "Reviewer approved Q1, edited text for Q2 (status=corrected), and rejected Q3 with notes."
+  },
+  {
+    "scenario": "Scenario 9: Security & IDOR Defense",
+    "document": "REST API Security Harness",
+    "status": "PASS",
+    "extracted_count": 0,
+    "avg_confidence": 1.0,
+    "time_s": 0.07,
+    "details": "Verified 401 for unauth, 404 for IDOR asset enumeration, and authorized admin oversight."
+  },
+  {
+    "scenario": "Scenario 10: Robust Error Handling",
+    "document": "Invalid Files Test Suite",
+    "status": "PASS",
+    "extracted_count": 0,
+    "avg_confidence": 1.0,
+    "time_s": 1.83,
+    "details": "Verified 400 DISGUISED_EXECUTABLE, 415 UNSUPPORTED_MEDIA_TYPE, and 413 PAYLOAD_TOO_LARGE."
+  }
+]

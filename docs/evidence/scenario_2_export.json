@@ -1,0 +1,478 @@
+{
+  "schema_version": "1.0",
+  "document_id": "41298def-131f-41e3-9daf-ecd93d062c4a",
+  "original_filename": "2_answer_key_start.pdf",
+  "page_count": 1,
+  "total_questions": 8,
+  "exported_at": "2026-09-19T20:01:35.641616+00:00",
+  "questions": [
+    {
+      "schema_version": "1.0",
+      "id": "5527e71d-f1ae-493a-89e8-5263935106a7",
+      "document_id": "41298def-131f-41e3-9daf-ecd93d062c4a",
+      "group_id": null,
+      "question_number": "1",
+      "sequence_index": 1,
+      "question_text": "(B)",
+      "question_type": "short_answer",
+      "options": [],
+      "answer": {
+        "value": [
+          "5"
+        ],
+        "raw": "1.5",
+        "source_page": 1,
+        "match_status": "matched",
+        "confidence": 0.95
+      },
+      "assets": [],
+      "source": {
+        "document": "2_answer_key_start.pdf",
+        "pages": [
+          1
+        ],
+        "bbox": null
+      },
+      "confidence": 0.971,
+      "confidence_breakdown": {
+        "ocr_confidence": 0.98,
+        "page_quality": 0.838,
+        "numbering_continuity": 1.0,
+        "option_completeness": 1.0,
+        "answer_certainty": 1.0,
+        "text_sanity": 1.0
+      },
+      "status": "success",
+      "warnings": [],
+      "review": {
+        "status": "none",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "original_value": null,
+        "notes": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "159dbee8-9802-4ca5-850b-c09657c570d4",
+      "document_id": "41298def-131f-41e3-9daf-ecd93d062c4a",
+      "group_id": null,
+      "question_number": "2",
+      "sequence_index": 2,
+      "question_text": "(D)",
+      "question_type": "short_answer",
+      "options": [],
+      "answer": {
+        "value": [
+          "4"
+        ],
+        "raw": "2 - 4",
+        "source_page": 1,
+        "match_status": "matched",
+        "confidence": 0.95
+      },
+      "assets": [],
+      "source": {
+        "document": "2_answer_key_start.pdf",
+        "pages": [
+          1
+        ],
+        "bbox": null
+      },
+      "confidence": 0.971,
+      "confidence_breakdown": {
+        "ocr_confidence": 0.98,
+        "page_quality": 0.838,
+        "numbering_continuity": 1.0,
+        "option_completeness": 1.0,
+        "answer_certainty": 1.0,
+        "text_sanity": 1.0
+      },
+      "status": "success",
+      "warnings": [],
+      "review": {
+        "status": "none",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "original_value": null,
+        "notes": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "de425640-d088-4659-88bd-9954ec483724",
+      "document_id": "41298def-131f-41e3-9daf-ecd93d062c4a",
+      "group_id": null,
+      "question_number": "3",
+      "sequence_index": 3,
+      "question_text": "(A)",
+      "question_type": "short_answer",
+      "options": [],
+      "answer": {
+        "value": [
+          "A"
+        ],
+        "raw": "Q3: (A)",
+        "source_page": 1,
+        "match_status": "matched",
+        "confidence": 0.95
+      },
+      "assets": [],
+      "source": {
+        "document": "2_answer_key_start.pdf",
+        "pages": [
+          1
+        ],
+        "bbox": null
+      },
+      "confidence": 0.971,
+      "confidence_breakdown": {
+        "ocr_confidence": 0.98,
+        "page_quality": 0.838,
+        "numbering_continuity": 1.0,
+        "option_completeness": 1.0,
+        "answer_certainty": 1.0,
+        "text_sanity": 1.0
+      },
+      "status": "success",
+      "warnings": [],
+      "review": {
+        "status": "none",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "original_value": null,
+        "notes": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "9bd1c73d-5807-47f7-9771-b9ee4c184ad8",
+      "document_id": "41298def-131f-41e3-9daf-ecd93d062c4a",
+      "group_id": null,
+      "question_number": "4",
+      "sequence_index": 4,
+      "question_text": "(C) EXAMINATION QUESTIONS",
+      "question_type": "short_answer",
+      "options": [],
+      "answer": {
+        "value": [
+          "C"
+        ],
+        "raw": "Q4: (C)",
+        "source_page": 1,
+        "match_status": "matched",
+        "confidence": 0.95
+      },
+      "assets": [],
+      "source": {
+        "document": "2_answer_key_start.pdf",
+        "pages": [
+          1
+        ],
+        "bbox": null
+      },
+      "confidence": 0.971,
+      "confidence_breakdown": {
+        "ocr_confidence": 0.98,
+        "page_quality": 0.838,
+        "numbering_continuity": 1.0,
+        "option_completeness": 1.0,
+        "answer_certainty": 1.0,
+        "text_sanity": 1.0
+      },
+      "status": "success",
+      "warnings": [],
+      "review": {
+        "status": "none",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "original_value": null,
+        "notes": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "c830fb4c-d331-4cf1-a264-0f0733508bfd",
+      "document_id": "41298def-131f-41e3-9daf-ecd93d062c4a",
+      "group_id": null,
+      "question_number": "1",
+      "sequence_index": 5,
+      "question_text": "What is the value of sin 30 degrees + cos 60 degrees?",
+      "question_type": "mcq_single",
+      "options": [
+        {
+          "label": "A",
+          "text": "0.5",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "B",
+          "text": "1.0",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "C",
+          "text": "1.5",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "D",
+          "text": "2.0",
+          "image_key": null,
+          "asset_ids": []
+        }
+      ],
+      "answer": {
+        "value": [
+          "5"
+        ],
+        "raw": "1.5",
+        "source_page": 1,
+        "match_status": "matched",
+        "confidence": 0.95
+      },
+      "assets": [],
+      "source": {
+        "document": "2_answer_key_start.pdf",
+        "pages": [
+          1
+        ],
+        "bbox": null
+      },
+      "confidence": 0.968,
+      "confidence_breakdown": {
+        "ocr_confidence": 0.98,
+        "page_quality": 0.838,
+        "numbering_continuity": 1.0,
+        "option_completeness": 1.0,
+        "answer_certainty": 1.0,
+        "text_sanity": 0.981
+      },
+      "status": "success",
+      "warnings": [],
+      "review": {
+        "status": "none",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "original_value": null,
+        "notes": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "be488826-d3c9-4c4e-94fd-bb99d316634c",
+      "document_id": "41298def-131f-41e3-9daf-ecd93d062c4a",
+      "group_id": null,
+      "question_number": "2",
+      "sequence_index": 6,
+      "question_text": "The discriminant of quadratic equation 2x^2 - 4x + 3 = 0 is:",
+      "question_type": "mcq_single",
+      "options": [
+        {
+          "label": "A",
+          "text": "8",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "B",
+          "text": "0",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "C",
+          "text": "16",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "D",
+          "text": "-8",
+          "image_key": null,
+          "asset_ids": []
+        }
+      ],
+      "answer": {
+        "value": [
+          "4"
+        ],
+        "raw": "2 - 4",
+        "source_page": 1,
+        "match_status": "matched",
+        "confidence": 0.95
+      },
+      "assets": [],
+      "source": {
+        "document": "2_answer_key_start.pdf",
+        "pages": [
+          1
+        ],
+        "bbox": null
+      },
+      "confidence": 0.961,
+      "confidence_breakdown": {
+        "ocr_confidence": 0.98,
+        "page_quality": 0.838,
+        "numbering_continuity": 1.0,
+        "option_completeness": 1.0,
+        "answer_certainty": 1.0,
+        "text_sanity": 0.933
+      },
+      "status": "success",
+      "warnings": [],
+      "review": {
+        "status": "none",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "original_value": null,
+        "notes": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "9ecda445-4e4c-48d2-932b-dcd24abb8441",
+      "document_id": "41298def-131f-41e3-9daf-ecd93d062c4a",
+      "group_id": null,
+      "question_number": "3",
+      "sequence_index": 7,
+      "question_text": "The sum of the first 20 positive even integers is:",
+      "question_type": "mcq_single",
+      "options": [
+        {
+          "label": "A",
+          "text": "420",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "B",
+          "text": "400",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "C",
+          "text": "210",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "D",
+          "text": "440",
+          "image_key": null,
+          "asset_ids": []
+        }
+      ],
+      "answer": {
+        "value": [
+          "A"
+        ],
+        "raw": "Q3: (A)",
+        "source_page": 1,
+        "match_status": "matched",
+        "confidence": 0.95
+      },
+      "assets": [],
+      "source": {
+        "document": "2_answer_key_start.pdf",
+        "pages": [
+          1
+        ],
+        "bbox": null
+      },
+      "confidence": 0.968,
+      "confidence_breakdown": {
+        "ocr_confidence": 0.98,
+        "page_quality": 0.838,
+        "numbering_continuity": 1.0,
+        "option_completeness": 1.0,
+        "answer_certainty": 1.0,
+        "text_sanity": 0.98
+      },
+      "status": "success",
+      "warnings": [],
+      "review": {
+        "status": "none",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "original_value": null,
+        "notes": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "1e65a6f7-6270-4f72-8357-15ada74d986c",
+      "document_id": "41298def-131f-41e3-9daf-ecd93d062c4a",
+      "group_id": null,
+      "question_number": "4",
+      "sequence_index": 8,
+      "question_text": "If the perimeter and area of a circle are numerically equal, the radius is:",
+      "question_type": "mcq_single",
+      "options": [
+        {
+          "label": "A",
+          "text": "1 unit",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "B",
+          "text": "pi units",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "C",
+          "text": "2 units",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "D",
+          "text": "4 units",
+          "image_key": null,
+          "asset_ids": []
+        }
+      ],
+      "answer": {
+        "value": [
+          "C"
+        ],
+        "raw": "Q4: (C)",
+        "source_page": 1,
+        "match_status": "matched",
+        "confidence": 0.95
+      },
+      "assets": [],
+      "source": {
+        "document": "2_answer_key_start.pdf",
+        "pages": [
+          1
+        ],
+        "bbox": null
+      },
+      "confidence": 0.969,
+      "confidence_breakdown": {
+        "ocr_confidence": 0.98,
+        "page_quality": 0.838,
+        "numbering_continuity": 1.0,
+        "option_completeness": 1.0,
+        "answer_certainty": 1.0,
+        "text_sanity": 0.987
+      },
+      "status": "success",
+      "warnings": [],
+      "review": {
+        "status": "none",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "original_value": null,
+        "notes": null
+      }
+    }
+  ]
+}

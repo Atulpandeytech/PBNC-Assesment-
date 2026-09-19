@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "document_id": "b2ac9529-4bdc-4f93-9924-f62301f1e687",
+  "original_filename": "4_question_image.png",
+  "page_count": 1,
+  "total_questions": 1,
+  "exported_at": "2026-09-19T20:01:38.167083+00:00",
+  "questions": [
+    {
+      "schema_version": "1.0",
+      "id": "c9c93502-900a-4cdb-88eb-7ad5b76802a6",
+      "document_id": "b2ac9529-4bdc-4f93-9924-f62301f1e687",
+      "group_id": null,
+      "question_number": "1",
+      "sequence_index": 1,
+      "question_text": "In the right-angled triangle ABC shown below, find the length of hypotenuse AC if AB = 6 cm and BC = 8 cm 6 cm",
+      "question_type": "mcq_single",
+      "options": [
+        {
+          "label": "A",
+          "text": "10 cm",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "B",
+          "text": "14 cm",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "C",
+          "text": "12 cm",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "D",
+          "text": "100 cm",
+          "image_key": null,
+          "asset_ids": []
+        }
+      ],
+      "answer": null,
+      "assets": [],
+      "source": {
+        "document": "4_question_image.png",
+        "pages": [
+          1
+        ],
+        "bbox": null
+      },
+      "confidence": 0.898,
+      "confidence_breakdown": {
+        "ocr_confidence": 0.92,
+        "page_quality": 0.774,
+        "numbering_continuity": 1.0,
+        "option_completeness": 1.0,
+        "answer_certainty": 0.7,
+        "text_sanity": 0.982
+      },
+      "status": "success",
+      "warnings": [],
+      "review": {
+        "status": "none",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "original_value": null,
+        "notes": null
+      }
+    }
+  ]
+}

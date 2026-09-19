@@ -1,0 +1,33 @@
+{
+  "unauthenticated_check": {
+    "endpoint": "GET /api/v1/documents",
+    "status_code": 401,
+    "response": {
+      "error": {
+        "code": "AUTHENTICATION_FAILED",
+        "message": "Authorization header is missing",
+        "details": {},
+        "request_id": "8d550835-361e-4351-97fd-b0c54be71856"
+      }
+    }
+  },
+  "idor_protection_check": {
+    "endpoint": "GET /api/v1/documents/cd38623e-2df2-4a60-bda2-78ece6060703",
+    "acting_user": "teacher2@pragatibharti.edu",
+    "owner_user": "teacher@pragatibharti.edu",
+    "status_code": 404,
+    "defense": "Strict 404 Not Found response prevents information enumeration.",
+    "response": {
+      "error": {
+        "code": "RESOURCE_NOT_FOUND",
+        "message": "Document 'cd38623e-2df2-4a60-bda2-78ece6060703' not found",
+        "details": {},
+        "request_id": "b2840bd1-992b-48bb-a571-2bc3837f73e0"
+      }
+    }
+  },
+  "admin_cross_tenant_access": {
+    "acting_user": "admin@pragatibharti.edu",
+    "status_code": 200
+  }
+}

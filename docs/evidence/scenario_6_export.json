@@ -1,0 +1,485 @@
+{
+  "group_id": "5d9e83b0-b94c-4335-a435-04e4f5c5e34f",
+  "group_name": "Chemistry Mid-Term Paper & Key Group",
+  "question_paper_document_id": "f33f75fb-fd46-45c0-b040-cc38863ca2cc",
+  "answer_key_document_id": "524eec6b-3e7b-4b7d-81a0-a28c5db8f1c1",
+  "total_questions": 8,
+  "questions": [
+    {
+      "schema_version": "1.0",
+      "id": "b55d3825-1718-4733-b5fc-282f9ba55327",
+      "document_id": "f33f75fb-fd46-45c0-b040-cc38863ca2cc",
+      "group_id": "5d9e83b0-b94c-4335-a435-04e4f5c5e34f",
+      "question_number": "1",
+      "sequence_index": 1,
+      "question_text": "What is the pH value of pure water at 25 degrees Celsius?",
+      "question_type": "mcq_single",
+      "options": [
+        {
+          "label": "A",
+          "text": "5",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "B",
+          "text": "7",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "C",
+          "text": "9",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "D",
+          "text": "14",
+          "image_key": null,
+          "asset_ids": []
+        }
+      ],
+      "answer": {
+        "value": [
+          "B"
+        ],
+        "raw": "Question 1: (B) 7",
+        "source_page": 1,
+        "match_status": "matched",
+        "confidence": 0.95
+      },
+      "assets": [],
+      "source": {
+        "document": "7_group_question_paper.pdf",
+        "pages": [
+          1
+        ],
+        "bbox": null
+      },
+      "confidence": 1.0,
+      "confidence_breakdown": {
+        "ocr_confidence": 0.98,
+        "page_quality": 0.823,
+        "numbering_continuity": 1.0,
+        "option_completeness": 1.0,
+        "answer_certainty": 0.7,
+        "text_sanity": 1.0
+      },
+      "status": "success",
+      "warnings": [],
+      "review": {
+        "status": "none",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "original_value": null,
+        "notes": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "446ddc94-db07-404d-9c26-4b7523157979",
+      "document_id": "524eec6b-3e7b-4b7d-81a0-a28c5db8f1c1",
+      "group_id": "5d9e83b0-b94c-4335-a435-04e4f5c5e34f",
+      "question_number": "C",
+      "sequence_index": 1,
+      "question_text": "Al2O3 Question 3",
+      "question_type": "short_answer",
+      "options": [
+        {
+          "label": "A",
+          "text": "-CHO Question 4",
+          "image_key": null,
+          "asset_ids": []
+        }
+      ],
+      "answer": null,
+      "assets": [],
+      "source": {
+        "document": "7_group_answer_key.pdf",
+        "pages": [
+          1
+        ],
+        "bbox": null
+      },
+      "confidence": 0.882,
+      "confidence_breakdown": {
+        "ocr_confidence": 0.98,
+        "page_quality": 0.75,
+        "numbering_continuity": 0.8,
+        "option_completeness": 1.0,
+        "answer_certainty": 0.7,
+        "text_sanity": 1.0
+      },
+      "status": "success",
+      "warnings": [],
+      "review": {
+        "status": "none",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "original_value": null,
+        "notes": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "de6da4cc-9d24-49d2-af2d-e8e820f57651",
+      "document_id": "f33f75fb-fd46-45c0-b040-cc38863ca2cc",
+      "group_id": "5d9e83b0-b94c-4335-a435-04e4f5c5e34f",
+      "question_number": "2",
+      "sequence_index": 2,
+      "question_text": "Which of the following is an amphoteric oxide?",
+      "question_type": "mcq_single",
+      "options": [
+        {
+          "label": "A",
+          "text": "Na2O",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "B",
+          "text": "SO2",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "C",
+          "text": "Al2O3",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "D",
+          "text": "CaO",
+          "image_key": null,
+          "asset_ids": []
+        }
+      ],
+      "answer": {
+        "value": [
+          "C"
+        ],
+        "raw": "Question 2: (C) Al2O3",
+        "source_page": 1,
+        "match_status": "matched",
+        "confidence": 0.95
+      },
+      "assets": [],
+      "source": {
+        "document": "7_group_question_paper.pdf",
+        "pages": [
+          1
+        ],
+        "bbox": null
+      },
+      "confidence": 1.0,
+      "confidence_breakdown": {
+        "ocr_confidence": 0.98,
+        "page_quality": 0.823,
+        "numbering_continuity": 1.0,
+        "option_completeness": 1.0,
+        "answer_certainty": 0.7,
+        "text_sanity": 1.0
+      },
+      "status": "success",
+      "warnings": [],
+      "review": {
+        "status": "none",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "original_value": null,
+        "notes": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "fe0f8114-0cff-4aca-a4e5-6f6a6810ca05",
+      "document_id": "524eec6b-3e7b-4b7d-81a0-a28c5db8f1c1",
+      "group_id": "5d9e83b0-b94c-4335-a435-04e4f5c5e34f",
+      "question_number": "C",
+      "sequence_index": 2,
+      "question_text": "Hydrogen Question 5",
+      "question_type": "short_answer",
+      "options": [],
+      "answer": null,
+      "assets": [],
+      "source": {
+        "document": "7_group_answer_key.pdf",
+        "pages": [
+          1
+        ],
+        "bbox": null
+      },
+      "confidence": 0.882,
+      "confidence_breakdown": {
+        "ocr_confidence": 0.98,
+        "page_quality": 0.75,
+        "numbering_continuity": 0.8,
+        "option_completeness": 1.0,
+        "answer_certainty": 0.7,
+        "text_sanity": 1.0
+      },
+      "status": "success",
+      "warnings": [],
+      "review": {
+        "status": "none",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "original_value": null,
+        "notes": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "fa876a27-9deb-4984-a949-3964af56c997",
+      "document_id": "f33f75fb-fd46-45c0-b040-cc38863ca2cc",
+      "group_id": "5d9e83b0-b94c-4335-a435-04e4f5c5e34f",
+      "question_number": "3",
+      "sequence_index": 3,
+      "question_text": "The functional group present in aldehydes is:",
+      "question_type": "mcq_single",
+      "options": [
+        {
+          "label": "A",
+          "text": "-CHO",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "B",
+          "text": "-COOH",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "C",
+          "text": "-OH",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "D",
+          "text": ">C=O",
+          "image_key": null,
+          "asset_ids": []
+        }
+      ],
+      "answer": {
+        "value": [
+          "A"
+        ],
+        "raw": "Question 3: (A) -CHO",
+        "source_page": 1,
+        "match_status": "matched",
+        "confidence": 0.95
+      },
+      "assets": [],
+      "source": {
+        "document": "7_group_question_paper.pdf",
+        "pages": [
+          1
+        ],
+        "bbox": null
+      },
+      "confidence": 1.0,
+      "confidence_breakdown": {
+        "ocr_confidence": 0.98,
+        "page_quality": 0.823,
+        "numbering_continuity": 1.0,
+        "option_completeness": 1.0,
+        "answer_certainty": 0.7,
+        "text_sanity": 0.978
+      },
+      "status": "success",
+      "warnings": [],
+      "review": {
+        "status": "none",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "original_value": null,
+        "notes": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "6a1b7132-49e7-4392-bedc-5223d777483f",
+      "document_id": "524eec6b-3e7b-4b7d-81a0-a28c5db8f1c1",
+      "group_id": "5d9e83b0-b94c-4335-a435-04e4f5c5e34f",
+      "question_number": "C",
+      "sequence_index": 3,
+      "question_text": "Nickel",
+      "question_type": "short_answer",
+      "options": [],
+      "answer": null,
+      "assets": [],
+      "source": {
+        "document": "7_group_answer_key.pdf",
+        "pages": [
+          1
+        ],
+        "bbox": null
+      },
+      "confidence": 0.882,
+      "confidence_breakdown": {
+        "ocr_confidence": 0.98,
+        "page_quality": 0.75,
+        "numbering_continuity": 0.8,
+        "option_completeness": 1.0,
+        "answer_certainty": 0.7,
+        "text_sanity": 1.0
+      },
+      "status": "success",
+      "warnings": [],
+      "review": {
+        "status": "none",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "original_value": null,
+        "notes": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "007211d7-7d18-4766-ae3c-9928faf36f5b",
+      "document_id": "f33f75fb-fd46-45c0-b040-cc38863ca2cc",
+      "group_id": "5d9e83b0-b94c-4335-a435-04e4f5c5e34f",
+      "question_number": "4",
+      "sequence_index": 4,
+      "question_text": "Which gas is evolved when zinc granules react with dilute sulphuric acid?",
+      "question_type": "mcq_single",
+      "options": [
+        {
+          "label": "A",
+          "text": "Oxygen",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "B",
+          "text": "Nitrogen",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "C",
+          "text": "Hydrogen",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "D",
+          "text": "Chlorine",
+          "image_key": null,
+          "asset_ids": []
+        }
+      ],
+      "answer": {
+        "value": [
+          "C"
+        ],
+        "raw": "Question 4: (C) Hydrogen",
+        "source_page": 1,
+        "match_status": "matched",
+        "confidence": 0.95
+      },
+      "assets": [],
+      "source": {
+        "document": "7_group_question_paper.pdf",
+        "pages": [
+          1
+        ],
+        "bbox": null
+      },
+      "confidence": 1.0,
+      "confidence_breakdown": {
+        "ocr_confidence": 0.98,
+        "page_quality": 0.823,
+        "numbering_continuity": 1.0,
+        "option_completeness": 1.0,
+        "answer_certainty": 0.7,
+        "text_sanity": 1.0
+      },
+      "status": "success",
+      "warnings": [],
+      "review": {
+        "status": "none",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "original_value": null,
+        "notes": null
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "1bf79e74-6040-40d5-95e6-fffba9d5bc7c",
+      "document_id": "f33f75fb-fd46-45c0-b040-cc38863ca2cc",
+      "group_id": "5d9e83b0-b94c-4335-a435-04e4f5c5e34f",
+      "question_number": "5",
+      "sequence_index": 5,
+      "question_text": "Stainless steel is an alloy of iron, chromium, and:",
+      "question_type": "mcq_single",
+      "options": [
+        {
+          "label": "A",
+          "text": "Copper",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "B",
+          "text": "Zinc",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "C",
+          "text": "Nickel",
+          "image_key": null,
+          "asset_ids": []
+        },
+        {
+          "label": "D",
+          "text": "Tin",
+          "image_key": null,
+          "asset_ids": []
+        }
+      ],
+      "answer": {
+        "value": [
+          "C"
+        ],
+        "raw": "Question 5: (C) Nickel",
+        "source_page": 1,
+        "match_status": "matched",
+        "confidence": 0.95
+      },
+      "assets": [],
+      "source": {
+        "document": "7_group_question_paper.pdf",
+        "pages": [
+          1
+        ],
+        "bbox": null
+      },
+      "confidence": 1.0,
+      "confidence_breakdown": {
+        "ocr_confidence": 0.98,
+        "page_quality": 0.823,
+        "numbering_continuity": 1.0,
+        "option_completeness": 1.0,
+        "answer_certainty": 0.7,
+        "text_sanity": 0.98
+      },
+      "status": "success",
+      "warnings": [],
+      "review": {
+        "status": "none",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "original_value": null,
+        "notes": null
+      }
+    }
+  ]
+}
